@@ -32,9 +32,7 @@
 
     <main>
         @yield('content')
-    </main>
-    
-    @include('partials.footer')   
+    </main>  
 
     {{-- js --}}
     @vite([

@@ -18,7 +18,7 @@
                                         </div>
                                         <div class="col-6 collapse-close"><a
                                                 href="/"
-                                                class="fas fa-times" data-toggle="collapse" data-target="#navbar_global"
+                                                class="fas fa-times" data-bs-toggle="collapse" data-bs-target="#navbar_global"
                                                 aria-controls="navbar_global" aria-expanded="false" title="close"
                                                 aria-label="Toggle navigation"></a></div>
                                         </div>
@@ -27,25 +27,25 @@
                                         <li class="nav-item">
                                                 <a href="#home" class="nav-link">
                                                         <span class="nav-link-inner-text">Accueil</span>
-                                                        <span class="fas fa-angle-down nav-link-arrow ml-2"></span>
+                                                        
                                                 </a>
                                         </li>                                        
                                         <li class="nav-item">
                                                 <a href="#feature" class="nav-link">
                                                         <span class="nav-link-inner-text">Fonctionnalités</span>
-                                                        <span class="fas fa-angle-down nav-link-arrow ml-2"></span>
+                                                        
                                                 </a>
                                         </li>
                                         <li class="nav-item">
                                                 <a href="#stat" class="nav-link">
                                                         <span class="nav-link-inner-text">Statistiques</span>
-                                                        <span class="fas fa-angle-down nav-link-arrow ml-2"></span>
+                                                        
                                                 </a>
                                         </li>
                                         <li class="nav-item">
                                                 <a href="#about" class="nav-link">
                                                         <span class="nav-link-inner-text">Qui sommes nous ?</span>
-                                                        <span class="fas fa-angle-down nav-link-arrow ml-2"></span>
+                                                        
                                                 </a>
                                         </li>
                                         
@@ -70,7 +70,7 @@
                                 </a>
                                @endguest
                                 
-                                <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target="#navbar_global"
+                                <button class="navbar-toggler ml-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_global"
                                         aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
                                         <span class="navbar-toggler-icon"></span>
                                 </button>
