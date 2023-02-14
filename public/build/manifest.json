@@ -1,12 +1,102 @@
 {
+  "resources/css/animate.css": {
+    "file": "assets/animate-94d4792a.css",
+    "isEntry": true,
+    "src": "resources/css/animate.css"
+  },
   "resources/css/app.css": {
-    "file": "assets/app-fcd01647.css",
+    "file": "assets/app-2ac3f0a5.css",
     "isEntry": true,
     "src": "resources/css/app.css"
+  },
+  "resources/css/paddle.css": {
+    "file": "assets/paddle-3eaf5ba9.css",
+    "isEntry": true,
+    "src": "resources/css/paddle.css"
+  },
+  "resources/css/template.css": {
+    "file": "assets/template-b6d09d63.css",
+    "isEntry": true,
+    "src": "resources/css/template.css"
+  },
+  "resources/css/util.css": {
+    "file": "assets/util-63e53670.css",
+    "isEntry": true,
+    "src": "resources/css/util.css"
   },
   "resources/js/app.js": {
     "file": "assets/app-1736b1f2.js",
     "isEntry": true,
     "src": "resources/js/app.js"
+  },
+  "resources/js/bootstrap-datepicker.js": {
+    "file": "assets/bootstrap-datepicker-b4a8aa2a.js",
+    "isEntry": true,
+    "src": "resources/js/bootstrap-datepicker.js"
+  },
+  "resources/js/buttons.js": {
+    "file": "assets/buttons-d0987714.js",
+    "isEntry": true,
+    "src": "resources/js/buttons.js"
+  },
+  "resources/js/headroom.js": {
+    "file": "assets/headroom-dae535b1.js",
+    "isEntry": true,
+    "src": "resources/js/headroom.js"
+  },
+  "resources/js/jarallax.js": {
+    "file": "assets/jarallax-472ce948.js",
+    "isEntry": true,
+    "src": "resources/js/jarallax.js"
+  },
+  "resources/js/jquery.countdown.js": {
+    "file": "assets/jquery.countdown-49248dff.js",
+    "isEntry": true,
+    "src": "resources/js/jquery.countdown.js"
+  },
+  "resources/js/jquery.counterup.js": {
+    "file": "assets/jquery.counterup-066e58b8.js",
+    "isEntry": true,
+    "src": "resources/js/jquery.counterup.js"
+  },
+  "resources/js/jquery.waypoints.js": {
+    "file": "assets/jquery.waypoints-f078804b.js",
+    "isEntry": true,
+    "src": "resources/js/jquery.waypoints.js"
+  },
+  "resources/js/nouislider.js": {
+    "file": "assets/nouislider-4ec36043.js",
+    "isEntry": true,
+    "src": "resources/js/nouislider.js"
+  },
+  "resources/js/on-screen.umd.js": {
+    "file": "assets/on-screen.umd-536af73c.js",
+    "isEntry": true,
+    "src": "resources/js/on-screen.umd.js"
+  },
+  "resources/js/owl.carousel.js": {
+    "file": "assets/owl.carousel-9b504a53.js",
+    "isEntry": true,
+    "src": "resources/js/owl.carousel.js"
+  },
+  "resources/js/paddle.js": {
+    "file": "assets/paddle-72b54e23.js",
+    "isEntry": true,
+    "src": "resources/js/paddle.js"
+  },
+  "resources/js/prism.js": {
+    "file": "assets/prism-865fc407.js",
+    "isEntry": true,
+    "src": "resources/js/prism.js"
+  },
+  "resources/js/smooth-scroll.polyfills.js": {
+    "file": "assets/smooth-scroll.polyfills-c528fb69.js",
+    "isEntry": true,
+    "src": "resources/js/smooth-scroll.polyfills.js"
+  },
+  "resources/js/template.js": {
+    "file": "assets/template-31dfd686.js",
+    "isEntry": true,
+    "src": "resources/js/template.js"
   }
 }
