@@ -3,7 +3,7 @@
              class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light headroom--not-bottom headroom--pinned headroom--top">
                 <div class="container position-relative">
                         <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4"
-                        href="#">
+                        href="{{ url('/') }}">
                         <i class="fab fa-etsy fa-2x navbar-brand-dark"></i>
                         <i class="fab fa-etsy fa-2x navbar-brand-light"></i>
                         </a>
@@ -54,7 +54,7 @@
 
                         <div class="d-flex align-items-center">
                                @auth
-                                <a href="{{ url('/tableau_bord') }}" class="btn btn-primary text-secondary mr-3">
+                                <a href="{{ url('/dashboard') }}" class="btn btn-primary text-secondary mr-3">
                                         <i class="fas fa-shopping-cart mr-2"></i> Tableau de bord
                                 </a>
                                 <form method="POST" action="{{ route('logout') }}">

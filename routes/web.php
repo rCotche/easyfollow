@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TableauBordController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,6 +32,9 @@ Route::middleware('auth')->group(function () {
 */
 Route::get('/', function () {
     return view('bienvenue');
+});
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', [TableauBordController::class, 'initializePageAccueil']);
 });
 
 require __DIR__.'/auth.php';

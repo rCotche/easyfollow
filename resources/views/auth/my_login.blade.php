@@ -13,7 +13,8 @@
                 <x-auth-session-status class="mb-4" :status="session('status')" />
 
                 <form method="POST" action="{{ route('login') }}" class="card bg-primary shadow-soft border-light">
-
+                    @csrf
+                    
                     <div class="card-body px-5">
                         <div class="form-group">
                             <label for="email">Email</label>
