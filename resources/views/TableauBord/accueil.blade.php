@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-10 col-lg-8">
+            <div class="col">
                 <div class="nav-wrapper position-relative mb-4">
                     <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icons-text"
                         role="tablist">
