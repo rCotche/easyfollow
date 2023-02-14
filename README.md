@@ -22,28 +22,6 @@ easyFollow
 utf8mb4_unicode_ci
 ```
 - Importez le fichier ".sql" dans la base de données que vous venez de créer
-- Dans votre projet Laravel modifier le fichier "app>config>database.php" pour la connexion au serveur de base de données
-```php
-'mysql' => [
-            'driver' => 'mysql',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
-            'unix_socket' => env('DB_SOCKET', ''),
-            'charset' => 'utf8mb4',
-            'collation' => 'utf8mb4_unicode_ci',
-            'prefix' => '',
-            'prefix_indexes' => true,
-            'strict' => true,
-            'engine' => 'InnoDB ROW_FORMAT=DYNAMIC',
-            'options' => extension_loaded('pdo_mysql') ? array_filter([
-                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
-            ]) : [],
-        ]
-```
 - Modifiez votre fichier environnement à la racine du projet pour la connexion au serveur de base de données :
 ```
 DB_CONNECTION=mysql
