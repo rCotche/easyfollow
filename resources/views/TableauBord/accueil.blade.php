@@ -152,7 +152,7 @@
                             {{-- vacation-tab --}}
                             <div class="tab-pane fade show" id="add-vacation" role="tabpanel"
                             aria-labelledby="add-vacation-tab">
-                                <form method="POST" action="{{ route('login') }}" class="card bg-primary shadow-soft border-light">
+                                <form method="POST" action="{{ route('ajout-Pointage') }}" class="card bg-primary shadow-soft border-light">
                                     @csrf
                                     
                                     <div class="card-body px-5">
@@ -194,15 +194,16 @@
                                                 <div class="form-group">
                                                     <label class="my-1 mr-2" for="mission">Mission/Vacation</label>
                                                     <select class="custom-select my-1 mr-sm-2" id="mission" name="mission">
-                                                        <option selected="selected">Choose...</option>
-                                                        <option value="1">United States</option>
-                                                        <option value="2">Germany</option>
-                                                        <option value="3">Canada</option>
+                                                        <option selected="selected">vide</option>
+                                                        @foreach ($lesMissions as $data)
+                                                        <option value="{{ $data->id }}"
+                                                            {{ old('mission') == $data->id ? 'selected' : '' }}>
+                                                            {{ $data->nom }}</option>
+                                                        @endforeach
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
-                                        
                                     </div>
                                     <div class="card-footer text-center pt-0 pb-5">
                                         <button type="reset" class="btn btn-primary rounded">
