@@ -19,6 +19,7 @@
         'resources/css/template.css',
         'resources/css/animate.css',
         'resources/css/paddle.css',
+        'resources/css/datatables.css',
         /**
          * conflit avec tailwind
          * 'resources/css/app.css',
@@ -59,6 +60,7 @@
         'resources/js/buttons.js',
         'resources/js/template.js',
         'resources/js/paddle.js',
+        'resources/js/datatables.js',
         'resources/js/app.js',
     ])
 

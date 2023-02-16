@@ -55,18 +55,18 @@
                         <div class="d-flex align-items-center">
                                @auth
                                 <a href="{{ url('/dashboard') }}" class="btn btn-primary text-secondary mr-3">
-                                        <i class="fas fa-shopping-cart mr-2"></i> Tableau de bord
+                                        <i class="fas fa-sign-in-alt mr-2"></i> Tableau de bord
                                 </a>
                                 <form method="POST" action="{{ route('logout') }}">
                                         @csrf
                                         <button type="submit" class="btn btn-primary d-none d-md-inline-block">
-                                                <i class="fas fa-book mr-2"></i> Déconnexion
+                                                <i class="fas fa-power-off mr-2"></i> Déconnexion
                                         </button>
                                 </form>
                                @endauth
                                @guest
                                 <a href="{{ url('/login') }}" class="btn btn-primary text-secondary mr-3">
-                                        <i class="fas fa-shopping-cart mr-2"></i> Connexion
+                                        <i class="fas fa-sign-in-alt mr-2"></i> Connexion
                                 </a>
                                @endguest
                                 
