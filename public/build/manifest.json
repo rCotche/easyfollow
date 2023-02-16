@@ -5,7 +5,7 @@
     "src": "resources/css/animate.css"
   },
   "resources/css/app.css": {
-    "file": "assets/app-6f8f7e72.css",
+    "file": "assets/app-4892901c.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
@@ -95,7 +95,7 @@
     "src": "resources/js/jquery.waypoints.js"
   },
   "resources/js/my_script.js": {
-    "file": "assets/my_script-12b54d18.js",
+    "file": "assets/my_script-fd747c8c.js",
     "isEntry": true,
     "src": "resources/js/my_script.js"
   },
@@ -103,11 +103,6 @@
     "file": "assets/nouislider-4ec36043.js",
     "isEntry": true,
     "src": "resources/js/nouislider.js"
-  },
-  "resources/js/on-screen.umd.js": {
-    "file": "assets/on-screen.umd-536af73c.js",
-    "isEntry": true,
-    "src": "resources/js/on-screen.umd.js"
   },
   "resources/js/owl.carousel.js": {
     "file": "assets/owl.carousel-9b504a53.js",
@@ -135,7 +130,7 @@
     "src": "resources/js/smooth-scroll.polyfills.js"
   },
   "resources/js/template.js": {
-    "file": "assets/template-31dfd686.js",
+    "file": "assets/template-91b5ebb4.js",
     "isEntry": true,
     "src": "resources/js/template.js"
   }

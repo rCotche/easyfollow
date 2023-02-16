@@ -43,6 +43,10 @@ class TableauBordController extends Controller
         ->groupBy(['ProductName','WeekNumber'])
         ->get();
         */
+        $parJour = DB::table('pointage')
+            ->join('mission', 'mission.id', '=', 'pointage.idMission')
+            ->select('*')
+            ->get();
 
         $missions = DB::table('mission')
             ->select('*')
@@ -50,6 +54,7 @@ class TableauBordController extends Controller
 
         return view('TableauBord.accueil', [
             'lesMissions' => $missions,
+            'dataJour' => $parJour,
         ]);
     }
     /*

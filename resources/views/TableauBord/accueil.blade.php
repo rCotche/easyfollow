@@ -44,7 +44,7 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <div class="mt-5 mb-5"><span class="font-weight-bold">Informations</span></div>
+                                            <div class="mt-5 mb-5"><span class="font-weight-bold">Informations générales</span></div>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -96,14 +96,67 @@
 
                                                         {{-- journalier-tab --}}
                                                         <div class="tab-pane fade show active" id="journalier" role="tabpanel"
-                                                            aria-labelledby="journalier-tab">
-                                                            <p>Exercitation photo booth stumptown tote bag Banksy, elit small batch freegan
-                                                                sed. Craft beer elit seitan exercitation, photo booth et 8-bit kale chips
-                                                                proident chillwave deep v laborum. Aliquip veniam delectus, Marfa eiusmod
-                                                                Pinterest in do umami readymade swag.</p>
-                                                            <p>Day handsome addition horrible sensible goodness two contempt. Evening for
-                                                                married his account removal. Estimable me disposing of be moonlight
-                                                                cordially curiosity.</p>
+                                                        aria-labelledby="journalier-tab">
+                                                            <div class="mb-1">
+                                                                <div class="mb-4">
+                                                                    <span class="h5">Résumé</span>
+                                                                </div>
+
+                                                                <div class="table-responsive-sm shadow-soft rounded p-3">
+                                                                    <table class="table table-hover datatable">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th class="border-0" scope="col" id="class2">Nom</th>
+                                                                                <th class="border-0" scope="col" id="teacher2">Date</th>
+                                                                                <th class="border-0" scope="col" id="teacher2">Heures</th>
+                                                                                <th class="border-0" scope="col" id="males2">Gain</th>
+                                                                                <th class="border-0" scope="col" id="females2">Gestion</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            @foreach ($dataJour as $data)
+                                                                                @php
+                                                                                /**
+                                                                                 * Format date
+                                                                                */
+                                                                                    $jour = substr($data->debut_journee, 8, 2);
+                                                                                    $mois = substr($data->debut_journee, 5, 2);
+                                                                                    $annee = substr($data->debut_journee, 0, 4);
+                                                
+                                                                                    $laDate = $jour . '/' . $mois . '/' . $annee;
+                                                                                /**
+                                                                                 * Calcul les heures entre 2 dates
+                                                                                */
+                                                                                    $date1 = new DateTime($data->debut_journee);
+                                                                                    $date2 = new DateTime($data->fin_journee);
+                                                                                    $diff = $date2->diff($date1);
+                                                                                    $hours = $diff->h;
+                                                                                    $hours = $hours + ($diff->days*24);
+
+                                                                                /**
+                                                                                 * Calcul les heures entre 2 dates
+                                                                                */
+                                                                                $gains = $hours * $data->taux_horaire
+                                                                                @endphp
+                                                                                <tr>
+                                                                                    <td>{{ $data->nom }}</td>
+                                                                                    <td>{{ $laDate }}</td>
+                                                                                    <td>{{ $hours }}</td>
+                                                                                    <td>{{ $gains }}</td>
+                                                                                    <td class="text-center">
+                                                                                        <button class="btn btn-icon-only btn-pill btn-outline-light text-facebook" 
+                                                                                        data-bs-toggle="modal" data-bs-target="#modal_detail{{$data->id}}"
+                                                                                        type="button">
+                                                                                            <i class="fas fa-cogs"></i>
+                                                                                            <span aria-hidden="true" class="fas fa-cogs"></span>
+                                                                                        </button>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            @endforeach
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
                                                         </div>
 
                                                         {{-- hebdomadaire-tab --}}
@@ -152,7 +205,7 @@
                             {{-- vacation-tab --}}
                             <div class="tab-pane fade show" id="add-vacation" role="tabpanel"
                             aria-labelledby="add-vacation-tab">
-                            
+
                                 <form method="POST" action="{{ route('ajout-Pointage') }}" class="card bg-primary shadow-soft border-light">
                                     @csrf
                                     
@@ -207,10 +260,10 @@
                                         </div>
                                     </div>
                                     <div class="card-footer text-center pt-0 pb-5">
-                                        <button type="reset" class="btn btn-primary rounded">
+                                        <button type="reset" class="btn btn-primary text-danger rounded">
                                             Annuler
                                         </button>
-                                        <button type="submit" class="btn btn-success rounded">
+                                        <button type="submit" class="btn btn-primary text-success rounded">
                                             Valider
                                         </button>
                                     </div>
@@ -223,4 +276,30 @@
         </div>
     </div>
 </div>
+
+{{-- Modal pour chaque données --}}
+@foreach ($dataJour as $data)
+    <div class="modal fade" id="modal_detail{{$data->id}}" tabindex="-1" aria-labelledby="modal_detail{{$data->id}}"
+    aria-modal="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content shadow-soft">
+                <div class="modal-header">
+                    <button type="button" class="close ml-auto" data-bs-dismiss="modal"
+                        aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body px-6">
+                    <div class="py-3">
+                        {{$data->description}}
+                    </div>
+                </div>
+                <div class="modal-footer z-2 mx-auto text-center">
+                    <p class="text-gray">{{$data->nom}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+@endforeach
+
 @endsection

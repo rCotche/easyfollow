@@ -95,12 +95,12 @@ $(document).ready(function () {
     });
 
     // Datepicker
-    $('.datepicker')[0] && $('.datepicker').each(function () {
+    /*$('.datepicker')[0] && $('.datepicker').each(function () {
         $('.datepicker').datepicker({
             disableTouchKeyboard: true,
             autoclose: false
         });
-    });
+    });*/
 
     // Tooltip
     $('[data-toggle="tooltip"]').tooltip();

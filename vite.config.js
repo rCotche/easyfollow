@@ -16,7 +16,10 @@ export default defineConfig({
                 'resources/js/popper.js',
                 'resources/js/cdn_bootstrap.js',
                 'resources/js/headroom.js',
-                'resources/js/on-screen.umd.js',
+                /*
+                * fix
+                * 'resources/js/on-screen.umd.js',
+                */
                 'resources/js/nouislider.js',
                 'resources/js/bootstrap-datepicker.js',
                 'resources/js/jquery.waypoints.js',

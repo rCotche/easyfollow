@@ -48,7 +48,6 @@
          * fix
          * 'resources/js/on-screen.umd.js',
          */
-        'resources/js/on-screen.umd.js',
         'resources/js/nouislider.js',
         /*
          * fix
