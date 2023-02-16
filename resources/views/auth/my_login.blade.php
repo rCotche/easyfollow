@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-12 col-md-10 mb-5 text-center">
                 <h2>Bienvenue !</h2>
-                <p>Veuillez vous connectez</p>
+                <p>Veuillez vous connectez pour accéder à votre espace</p>
             </div>
             <div class="col-12 col-lg-8">
 
