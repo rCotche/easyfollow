@@ -64,17 +64,17 @@ class TableauBordController extends Controller
     {
         //valide les donnees de la requete
         $request->validate([
-            'date_debut_journee' => ['required', 'string', 'max:16', 'date_format:yyyy-mm-dd H:i'],
-            'date_fin_journee' => ['required', 'string', 'max:16', 'date_format:yyyy-mm-dd H:i'],
-            'mission' => ['string', 'max:255'],
+            'date_debut_journee' => ['required', 'date', 'date_format:Y-m-d H:i'],
+            'date_fin_journee' => ['required',  'date', 'date_format:Y-m-d H:i', 'after:date_debut_journee'],
+            'mission' => ['required', 'integer'],
         ]);
 
         //ajout d'un pointage dans la bdd
         Pointage::create([
-            'debut_journee' => $request->nom,
-            'date_fin_journee' => $request->description,
+            'debut_journee' => $request->date_debut_journee,
+            'fin_journee' => $request->date_fin_journee,
             'idUsers' => Auth::user()->id,
-            'idMission' => $request->formateur,
+            'idMission' => $request->mission,
         ]);
 
         return redirect('/dashboard');
@@ -83,18 +83,18 @@ class TableauBordController extends Controller
     {
         //valide les donnees de la requete
         $request->validate([
-            'date_debut_journee' => ['required', 'string', 'max:16', 'date_format:yyyy-mm-dd H:i'],
-            'date_fin_journee' => ['required', 'string', 'max:16', 'date_format:yyyy-mm-dd H:i'],
-            'mission' => ['string', 'max:255'],
+            'date_debut_journee' => ['required', 'date', 'date_format:Y-m-d H:i'],
+            'date_fin_journee' => ['required',  'date', 'date_format:Y-m-d H:i', 'after:date_debut_journee'],
+            'mission' => ['required', 'integer'],
         ]);
 
         //mise à jour du pointage en indiquant l'id correspondant
         $lePointage = Pointage::findOrFail($request->pointage);
         $lePointage->update([
-            'debut_journee' => $request->nom,
-            'date_fin_journee' => $request->description,
+            'debut_journee' => $request->date_debut_journee,
+            'fin_journee' => $request->date_fin_journee,
             'idUsers' => Auth::user()->id,
-            'idMission' => $request->formateur,
+            'idMission' => $request->mission,
         ]);
 
         return redirect('/dashboard');

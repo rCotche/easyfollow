@@ -152,6 +152,7 @@
                             {{-- vacation-tab --}}
                             <div class="tab-pane fade show" id="add-vacation" role="tabpanel"
                             aria-labelledby="add-vacation-tab">
+                            
                                 <form method="POST" action="{{ route('ajout-Pointage') }}" class="card bg-primary shadow-soft border-light">
                                     @csrf
                                     
