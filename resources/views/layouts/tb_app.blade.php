@@ -30,7 +30,7 @@
 
 <body>
 
-    @include('partials.header')
+    @include('partials.tb_header')
 
     <main>
         @yield('content')

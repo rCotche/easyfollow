@@ -158,7 +158,7 @@
                                     <div class="card-body px-5">
                                         <div class="row">
                                             {{-- Journée debut --}}
-                                            <div class="col">
+                                            <div class="col-lg-6 col-md-12">
                                                 <div class="form-group">
                                                     <label for="date_debut_journee">Début journée</label>
                                                     <div class="input-group mb-4">
@@ -173,7 +173,7 @@
                                                 </div>
                                             </div>
                                             {{-- Journée fin --}}
-                                            <div class="col">
+                                            <div class="col-lg-6 col-md-12">
                                                 <div class="form-group">
                                                     <label for="date_fin_journee">Fin journée</label>
                                                     <div class="input-group mb-4">
@@ -189,11 +189,11 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            {{-- Soir debut --}}
+                                            {{-- Mission --}}
                                             <div class="col">
                                                 <div class="form-group">
                                                     <label class="my-1 mr-2" for="mission">Mission/Vacation</label>
-                                                    <select class="custom-select my-1 mr-sm-2" id="mission">
+                                                    <select class="custom-select my-1 mr-sm-2" id="mission" name="mission">
                                                         <option selected="selected">Choose...</option>
                                                         <option value="1">United States</option>
                                                         <option value="2">Germany</option>
