@@ -42,7 +42,7 @@ class TableauBordController extends Controller
     /**
      * Client
      */
-    public function addClient(Request $request)
+    public function addMission(Request $request)
     {
         //valide les donnees de la requete
         $request->validate([

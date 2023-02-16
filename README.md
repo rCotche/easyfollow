@@ -1,6 +1,6 @@
 # Easy follow
 
-EasyFollow est une application de pointage crossplatform (mobile, desktop, web).
+easyfollow est une application de pointage crossplatform (mobile, desktop, web).
 Avec une interface intuitive elle permet de suivre ses heures de travail et ses gains
 obtenus.
 
@@ -15,7 +15,7 @@ obtenus.
 
 - Créez une base de donnée avec pour nom :
 ```
-easyFollow
+easyfollow
 ```
 - Assurez vous que l'interclassement est :
 ```
@@ -27,7 +27,7 @@ utf8mb4_unicode_ci
 DB_CONNECTION=mysql
 DB_HOST=
 DB_PORT=
-DB_DATABASE=easyFollow
+DB_DATABASE=easyfollow
 DB_USERNAME=
 DB_PASSWORD=
 ```

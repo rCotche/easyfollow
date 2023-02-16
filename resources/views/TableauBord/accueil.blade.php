@@ -157,62 +157,48 @@
                                     
                                     <div class="card-body px-5">
                                         <div class="row">
+                                            {{-- Journée debut --}}
                                             <div class="col">
                                                 <div class="form-group">
-                                                    <label for="date_debut_matin">Email</label>
+                                                    <label for="date_debut_journee">Début journée</label>
                                                     <div class="input-group mb-4">
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text">
                                                                 <span class="far fa-calendar-alt"></span>
                                                             </span>
                                                         </div>
-                                                        <input class="form-control datepicker" type="text" id="date_debut_matin"
-                                                        name="date_debut_matin" :value="old('date_debut_matin')" required autofocus>
+                                                        <input class="form-control datepicker" type="text" id="date_debut_journee"
+                                                        name="date_debut_journee" :value="old('date_debut_journee')" required autofocus>
                                                     </div>
                                                 </div>
                                             </div>
+                                            {{-- Journée fin --}}
                                             <div class="col">
                                                 <div class="form-group">
-                                                    <label for="date_debut_matin">Email</label>
+                                                    <label for="date_fin_journee">Fin journée</label>
                                                     <div class="input-group mb-4">
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text">
                                                                 <span class="far fa-calendar-alt"></span>
                                                             </span>
                                                         </div>
-                                                        <input class="form-control datepicker" type="text" id="date_debut_matin"
-                                                        name="date_debut_matin" :value="old('date_debut_matin')" required autofocus>
+                                                        <input class="form-control datepicker" type="text" id="date_fin_journee"
+                                                        name="date_fin_journee" :value="old('date_fin_journee')" required>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
+                                            {{-- Soir debut --}}
                                             <div class="col">
                                                 <div class="form-group">
-                                                    <label for="date_debut_matin">Email</label>
-                                                    <div class="input-group mb-4">
-                                                        <div class="input-group-prepend">
-                                                            <span class="input-group-text">
-                                                                <span class="far fa-calendar-alt"></span>
-                                                            </span>
-                                                        </div>
-                                                        <input class="form-control datepicker" type="text" id="date_debut_matin"
-                                                        name="date_debut_matin" :value="old('date_debut_matin')" required autofocus>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="form-group">
-                                                    <label for="date_debut_matin">Email</label>
-                                                    <div class="input-group mb-4">
-                                                        <div class="input-group-prepend">
-                                                            <span class="input-group-text">
-                                                                <span class="far fa-calendar-alt"></span>
-                                                            </span>
-                                                        </div>
-                                                        <input class="form-control datepicker" type="text" id="date_debut_matin"
-                                                        name="date_debut_matin" :value="old('date_debut_matin')" required autofocus>
-                                                    </div>
+                                                    <label class="my-1 mr-2" for="mission">Mission/Vacation</label>
+                                                    <select class="custom-select my-1 mr-sm-2" id="mission">
+                                                        <option selected="selected">Choose...</option>
+                                                        <option value="1">United States</option>
+                                                        <option value="2">Germany</option>
+                                                        <option value="3">Canada</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
