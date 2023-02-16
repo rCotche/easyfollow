@@ -5,9 +5,19 @@
     "src": "resources/css/animate.css"
   },
   "resources/css/app.css": {
-    "file": "assets/app-3d297e2e.css",
+    "file": "assets/app-6f8f7e72.css",
     "isEntry": true,
     "src": "resources/css/app.css"
+  },
+  "resources/css/datatables.css": {
+    "file": "assets/datatables-01b1f282.css",
+    "isEntry": true,
+    "src": "resources/css/datatables.css"
+  },
+  "resources/css/flatpickr.css": {
+    "file": "assets/flatpickr-7b14c7ca.css",
+    "isEntry": true,
+    "src": "resources/css/flatpickr.css"
   },
   "resources/css/paddle.css": {
     "file": "assets/paddle-3eaf5ba9.css",
@@ -30,7 +40,7 @@
     "src": "resources/js/app.js"
   },
   "resources/js/bootstrap-datepicker.js": {
-    "file": "assets/bootstrap-datepicker-b4a8aa2a.js",
+    "file": "assets/bootstrap-datepicker-0e913732.js",
     "isEntry": true,
     "src": "resources/js/bootstrap-datepicker.js"
   },
@@ -43,6 +53,16 @@
     "file": "assets/cdn_bootstrap-e9898fac.js",
     "isEntry": true,
     "src": "resources/js/cdn_bootstrap.js"
+  },
+  "resources/js/datatables.js": {
+    "file": "assets/datatables-baf01e69.js",
+    "isEntry": true,
+    "src": "resources/js/datatables.js"
+  },
+  "resources/js/flatpickr.js": {
+    "file": "assets/flatpickr-1486ce37.js",
+    "isEntry": true,
+    "src": "resources/js/flatpickr.js"
   },
   "resources/js/headroom.js": {
     "file": "assets/headroom-dae535b1.js",
@@ -73,6 +93,11 @@
     "file": "assets/jquery.waypoints-f078804b.js",
     "isEntry": true,
     "src": "resources/js/jquery.waypoints.js"
+  },
+  "resources/js/my_script.js": {
+    "file": "assets/my_script-6b4f16e3.js",
+    "isEntry": true,
+    "src": "resources/js/my_script.js"
   },
   "resources/js/nouislider.js": {
     "file": "assets/nouislider-4ec36043.js",
