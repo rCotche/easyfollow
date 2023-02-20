@@ -145,7 +145,7 @@
                                                                                     <td>{{ $gains }}</td>
                                                                                     <td class="text-center">
                                                                                         <button class="btn btn-icon-only btn-pill btn-outline-light text-facebook" 
-                                                                                        data-bs-toggle="modal" data-bs-target="#modal_detail{{$data->id}}"
+                                                                                        data-bs-toggle="modal" data-bs-target="#modal_detail{{$data->idPointage}}"
                                                                                         type="button">
                                                                                             <i class="fas fa-cogs"></i>
                                                                                             <span aria-hidden="true" class="fas fa-cogs"></span>
@@ -273,7 +273,7 @@
 
 {{-- Modal pour chaque données --}}
 @foreach ($dataJour as $dataSelected)
-    <div class="modal fade" id="modal_detail{{$dataSelected->id}}" tabindex="-1" aria-labelledby="modal_detail{{$dataSelected->id}}"
+    <div class="modal fade" id="modal_detail{{$dataSelected->idPointage}}" tabindex="-1" aria-labelledby="modal_detail{{$dataSelected->idPointage}}"
     aria-modal="true">
         <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-xl-down">
             <div class="modal-content shadow-soft">
@@ -288,24 +288,24 @@
                         <div class="col">
                             
                             <div class="nav-wrapper position-relative mb-4">
-                                <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-detail-{{$dataSelected->id}}" role="tablist">
+                                <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-detail-{{$dataSelected->idPointage}}" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link mb-sm-3 mb-md-0 active" id="graph-tab" data-bs-toggle="tab"
-                                        href="#graph{{$dataSelected->id}}" role="tab" aria-controls="graph" aria-selected="true">
+                                        href="#graph{{$dataSelected->idPointage}}" role="tab" aria-controls="graph" aria-selected="true">
                                             <i class="fas fa-chart-area"></i>
                                             Graphique
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link mb-sm-3 mb-md-0" id="maj-tab" data-bs-toggle="tab"
-                                        href="#maj{{$dataSelected->id}}" role="tab" aria-controls="maj" aria-selected="false">
+                                        href="#maj{{$dataSelected->idPointage}}" role="tab" aria-controls="maj" aria-selected="false">
                                             <i class="fas fa-sync-alt"></i>
                                             Mise à jour
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link mb-sm-3 mb-md-0" id="suppression-tab" data-bs-toggle="tab"
-                                        href="#suppression{{$dataSelected->id}}" role="tab" aria-controls="suppression" aria-selected="false">
+                                        <a class="nav-link mb-sm-3 mb-md-0 del ceBTN{{$dataSelected->idPointage}}" id="suppression-tab" data-bs-toggle="tab"
+                                        href="#suppression{{$dataSelected->idPointage}}" role="tab" aria-controls="suppression" aria-selected="false">
                                             <i class="fas fa-calendar-times"></i>
                                             Supprimer
                                         </a>
@@ -315,17 +315,19 @@
                             <div class="card shadow-inset bg-primary border-light p-4 rounded">
                                 <div class="card-body p-0">
                                     {{-- --}}
-                                    <div class="tab-content" id="tabdetail{{$dataSelected->id}}">
+                                    <div class="tab-content" id="tabdetail{{$dataSelected->idPointage}}">
                                         {{-- --}}
-                                        <div class="tab-pane fade show active" id="graph{{$dataSelected->id}}" role="tabpanel"
+                                        <div class="tab-pane fade show active" id="graph{{$dataSelected->idPointage}}" role="tabpanel"
                                         aria-labelledby="graph-tab" tabindex="0">
                                             Bientôt
                                         </div>
                                         {{-- --}}
-                                        <div class="tab-pane fade show" id="maj{{$dataSelected->id}}" role="tabpanel"
+                                        <div class="tab-pane fade show" id="maj{{$dataSelected->idPointage}}" role="tabpanel"
                                         aria-labelledby="maj-tab" tabindex="0">
                                             <form method="POST" action="{{ route('edition-Pointage') }}" class="card bg-primary shadow-soft border-light">
                                                 @csrf
+
+                                                <input class="form-control" type="hidden" value="{{ $dataSelected->idPointage }}" name="pointage">
                                                 
                                                 <div class="card-body px-5">
                                                     <div class="row">
@@ -368,7 +370,7 @@
                                                                 <select class="custom-select my-1 mr-sm-2" id="mission" name="mission">
                                                                     @foreach ($lesMissions as $data)
                                                                     <option value="{{ $data->id }}"
-                                                                        {{ $dataSelected->id == $data->id ? 'selected' : '' }}>
+                                                                        {{ $dataSelected->idPointage == $data->id ? 'selected' : '' }}>
                                                                         {{ $data->nom }}</option>
                                                                     @endforeach
                                                                 </select>
@@ -387,10 +389,25 @@
                                             </form>
                                         </div>
                                         {{-- --}}
-                                        <div class="tab-pane fade show text-center" id="suppression{{$dataSelected->id}}" role="tabpanel"
+                                        <div class="tab-pane fade show text-center" id="suppression{{$dataSelected->idPointage}}" role="tabpanel"
                                         aria-labelledby="suppression-tab" tabindex="0">
                                             <p>Voulez vous supprimer <b>définitivement</b> la mission du {{ $dataSelected->debut_journee }} ?</p>
-                                            <p>Un retour en arrière ne sera pas possible</p>
+                                            <p class="twinkling">Un retour en arrière ne sera pas possible</p>
+                                            <div class="progressBar">
+                                                <div class="bar"></div>
+                                            </div>
+                                            <form method="POST" action="{{ route('suppression-Pointage') }}">
+                                                @csrf
+
+                                                <input class="form-control" type="hidden" value="{{ $dataSelected->idPointage }}" name="pointage">
+
+                                                <button type="button" class="btn btn-primary rounded" data-bs-dismiss="modal">
+                                                    Annuler
+                                                </button>
+                                                <button type="submit" class="btn btn-primary text-danger rounded ceBTN{{$dataSelected->idPointage}}" disabled="disabled">
+                                                    Supprimer
+                                                </button>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>

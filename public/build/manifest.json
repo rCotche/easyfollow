@@ -1,9 +1,4 @@
 {
-  "resources/css/app.css": {
-    "file": "assets/app-4892901c.css",
-    "isEntry": true,
-    "src": "resources/css/app.css"
-  },
   "resources/css/datatables.css": {
     "file": "assets/datatables-01b1f282.css",
     "isEntry": true,
@@ -13,6 +8,11 @@
     "file": "assets/flatpickr-7b14c7ca.css",
     "isEntry": true,
     "src": "resources/css/flatpickr.css"
+  },
+  "resources/css/my_style.css": {
+    "file": "assets/my_style-91d6f08e.css",
+    "isEntry": true,
+    "src": "resources/css/my_style.css"
   },
   "resources/css/template.css": {
     "file": "assets/template-b6d09d63.css",
@@ -55,7 +55,7 @@
     "src": "resources/js/jquery.js"
   },
   "resources/js/my_script.js": {
-    "file": "assets/my_script-fd747c8c.js",
+    "file": "assets/my_script-3a5dc14b.js",
     "isEntry": true,
     "src": "resources/js/my_script.js"
   },

@@ -9,7 +9,7 @@ export default defineConfig({
                 'resources/css/template.css',
                 'resources/css/datatables.css',
                 'resources/css/flatpickr.css',
-                'resources/css/app.css',
+                'resources/css/my_style.css',
                 'resources/js/jquery.js',
                 'resources/js/popper.js',
                 'resources/js/cdn_bootstrap.js',

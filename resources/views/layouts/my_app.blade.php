@@ -19,6 +19,7 @@
         'resources/css/template.css',
         'resources/css/datatables.css',
         'resources/css/flatpickr.css',
+        'resources/css/my_style.css',
     ])
 </head>
 

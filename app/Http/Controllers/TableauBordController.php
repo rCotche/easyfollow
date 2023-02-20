@@ -45,7 +45,13 @@ class TableauBordController extends Controller
         */
         $parJour = DB::table('pointage')
             ->join('mission', 'mission.id', '=', 'pointage.idMission')
-            ->select('*')
+            ->select('pointage.id as idPointage',
+            'debut_journee',
+            'fin_journee',
+            'idUsers',
+            'idMission',
+            'nom',
+            'taux_horaire')
             ->get();
 
         $missions = DB::table('mission')
@@ -107,8 +113,8 @@ class TableauBordController extends Controller
     public function deletePointage(Request $request)
     {
         //supprime le pointage en indiquant l'id correspondant
-        $personne = Pointage::findOrFail($request->pointage);
-        $personne->delete();
+        $lePointage = Pointage::findOrFail($request->pointage);
+        $lePointage->delete();
 
         return redirect('/dashboard');
     }

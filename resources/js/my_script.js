@@ -49,7 +49,32 @@ function getFlatpickrCalendar(){
         });
     }
 }
+function btnSupprimer() {
+    if ($(".del").length) {
+
+        $(".del").click(function (e) {
+            e.preventDefault();
+
+            var myClasses = this.classList;
+            progress(10, 10, $(".progressBar"));
+            setTimeout(function () {
+                $("button."+myClasses[4]).removeAttr("disabled");
+            }, 10000);
+        });
+    }
+}
+
+function progress(timeleft, timetotal, $element) {
+    var progressBarWidth = timeleft * $element.width() / timetotal;
+    $element.find('div').animate({ width: progressBarWidth }, 500).html(Math.floor(timeleft/60) + ":"+ timeleft%60);
+    if(timeleft > 0) {
+        setTimeout(function() {
+            progress(timeleft - 1, timetotal, $element);
+        }, 1000);
+    }
+};
 function getUtils() {
     getFlatpickrCalendar();
     getDatatable();
+    btnSupprimer();
 }
