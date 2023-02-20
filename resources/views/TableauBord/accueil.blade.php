@@ -10,14 +10,14 @@
         <div class="row">
             <div class="col">
                 <div class="nav-wrapper position-relative mb-4">
-                    <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icons-text"
+                    <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-general"
                         role="tablist">
                         {{-- resume --}}
                         <li class="nav-item">
                             <a class="nav-link mb-sm-3 mb-md-0 active" id="resume-tab"
                                 data-bs-toggle="tab"
                                 href="#resume"
-                                role="tab" aria-controls="resume" aria-selected="false">
+                                role="tab" aria-controls="resume" aria-selected="true">
                                 <i class="fas fa-info-circle"></i>Resumé
                             </a>
                         </li>
@@ -34,11 +34,11 @@
                 </div>
                 <div class="card shadow-inset bg-primary border-light p-4 rounded">
                     <div class="card-body p-0">
-                        <div class="tab-content" id="tabcontent2">
+                        <div class="tab-content" id="tabgeneral">
 
                             {{-- resume-tab --}}
                             <div class="tab-pane fade show active" id="resume" role="tabpanel"
-                            aria-labelledby="resume-tab">
+                            aria-labelledby="resume-tab" tabindex="0">
                             
                                 {{-- visuel --}}
                                 <div class="container">
@@ -50,14 +50,14 @@
                                     <div class="row">
                                         <div class="col">
                                             <div class="nav-wrapper position-relative mb-4">
-                                                <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icons-text"
+                                                <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-info"
                                                     role="tablist">
                                                     {{-- journalier --}}
                                                     <li class="nav-item">
                                                         <a class="nav-link mb-sm-3 mb-md-0 active" id="journalier-tab"
                                                             data-bs-toggle="tab"
                                                             href="#journalier"
-                                                            role="tab" aria-controls="journalier" aria-selected="false">
+                                                            role="tab" aria-controls="journalier" aria-selected="true">
                                                             <i class="fas fa-calendar-day"></i>Journalier
                                                         </a>
                                                     </li>
@@ -75,7 +75,7 @@
                                                         <a class="nav-link mb-sm-3 mb-md-0"
                                                             id="mensuel-tab" data-bs-toggle="tab"
                                                             href="#mensuel"
-                                                            role="tab" aria-controls="mensuel" aria-selected="true">
+                                                            role="tab" aria-controls="mensuel" aria-selected="false">
                                                             <i class="fas fa-calendar-alt"></i>Mensuel
                                                         </a>
                                                     </li>
@@ -84,7 +84,7 @@
                                                         <a class="nav-link mb-sm-3 mb-md-0"
                                                             id="annuel-tab" data-bs-toggle="tab"
                                                             href="#annuel"
-                                                            role="tab" aria-controls="annuel" aria-selected="true">
+                                                            role="tab" aria-controls="annuel" aria-selected="false">
                                                             <i class="fas fa-calendar"></i>Annuel
                                                         </a>
                                                     </li>
@@ -92,11 +92,11 @@
                                             </div>
                                             <div class="card shadow-inset bg-primary border-light p-4 rounded">
                                                 <div class="card-body p-0">
-                                                    <div class="tab-content" id="tabcontent2">
+                                                    <div class="tab-content" id="tabinfo">
 
                                                         {{-- journalier-tab --}}
                                                         <div class="tab-pane fade show active" id="journalier" role="tabpanel"
-                                                        aria-labelledby="journalier-tab">
+                                                        aria-labelledby="journalier-tab" tabindex="0">
                                                             <div class="mb-1">
                                                                 <div class="mb-4">
                                                                     <span class="h5">Résumé</span>
@@ -161,7 +161,7 @@
 
                                                         {{-- hebdomadaire-tab --}}
                                                         <div class="tab-pane fade show" id="hebdomadaire" role="tabpanel"
-                                                            aria-labelledby="hebdomadaire-tab">
+                                                        aria-labelledby="hebdomadaire-tab" tabindex="0">
                                                             <p>Photo booth stumptown tote bag Banksy, elit small batch freegan sed. Craft
                                                                 beer elit seitan exercitation, photo booth et 8-bit kale chips proident
                                                                 chillwave deep v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest
@@ -173,7 +173,7 @@
 
                                                         {{-- mensuel-tab --}}
                                                         <div class="tab-pane fade show" id="mensuel" role="tabpanel"
-                                                            aria-labelledby="mensuel-tab">
+                                                        aria-labelledby="mensuel-tab" tabindex="0">
                                                             <p>Exercitation photo booth stumptown tote bag Banksy, elit small batch freegan
                                                                 sed. Craft beer elit seitan exercitation, photo booth et 8-bit kale chips
                                                                 proident chillwave deep v laborum. Aliquip veniam delectus, Marfa eiusmod
@@ -185,14 +185,8 @@
 
                                                         {{-- annuel-tab --}}
                                                         <div class="tab-pane fade show" id="annuel" role="tabpanel"
-                                                            aria-labelledby="annuel-tab">
-                                                            <p>Exercitation photo booth stumptown tote bag Banksy, elit small batch freegan
-                                                                sed. Craft beer elit seitan exercitation, photo booth et 8-bit kale chips
-                                                                proident chillwave deep v laborum. Aliquip veniam delectus, Marfa eiusmod
-                                                                Pinterest in do umami readymade swag.</p>
-                                                            <p>Day handsome addition horrible sensible goodness two contempt. Evening for
-                                                                married his account removal. Estimable me disposing of be moonlight
-                                                                cordially curiosity.</p>
+                                                        aria-labelledby="annuel-tab" tabindex="0">
+                                                            a
                                                         </div>
                                                     </div>
                                                 </div>
@@ -204,7 +198,7 @@
 
                             {{-- vacation-tab --}}
                             <div class="tab-pane fade show" id="add-vacation" role="tabpanel"
-                            aria-labelledby="add-vacation-tab">
+                            aria-labelledby="add-vacation-tab" tabindex="0">
 
                                 <form method="POST" action="{{ route('ajout-Pointage') }}" class="card bg-primary shadow-soft border-light">
                                     @csrf
@@ -278,8 +272,8 @@
 </div>
 
 {{-- Modal pour chaque données --}}
-@foreach ($dataJour as $data)
-    <div class="modal fade" id="modal_detail{{$data->id}}" tabindex="-1" aria-labelledby="modal_detail{{$data->id}}"
+@foreach ($dataJour as $dataSelected)
+    <div class="modal fade" id="modal_detail{{$dataSelected->id}}" tabindex="-1" aria-labelledby="modal_detail{{$dataSelected->id}}"
     aria-modal="true">
         <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-xl-down">
             <div class="modal-content shadow-soft">
@@ -291,11 +285,122 @@
                 </div>
                 <div class="modal-body px-6">
                     <div class="py-3">
-                        {{$data->description}}
+                        <div class="col">
+                            
+                            <div class="nav-wrapper position-relative mb-4">
+                                <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-detail-{{$dataSelected->id}}" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link mb-sm-3 mb-md-0 active" id="graph-tab" data-bs-toggle="tab"
+                                        href="#graph{{$dataSelected->id}}" role="tab" aria-controls="graph" aria-selected="true">
+                                            <i class="fas fa-chart-area"></i>
+                                            Graphique
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link mb-sm-3 mb-md-0" id="maj-tab" data-bs-toggle="tab"
+                                        href="#maj{{$dataSelected->id}}" role="tab" aria-controls="maj" aria-selected="false">
+                                            <i class="fas fa-sync-alt"></i>
+                                            Mise à jour
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link mb-sm-3 mb-md-0" id="suppression-tab" data-bs-toggle="tab"
+                                        href="#suppression{{$dataSelected->id}}" role="tab" aria-controls="suppression" aria-selected="false">
+                                            <i class="fas fa-calendar-times"></i>
+                                            Supprimer
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card shadow-inset bg-primary border-light p-4 rounded">
+                                <div class="card-body p-0">
+                                    {{-- --}}
+                                    <div class="tab-content" id="tabdetail{{$dataSelected->id}}">
+                                        {{-- --}}
+                                        <div class="tab-pane fade show active" id="graph{{$dataSelected->id}}" role="tabpanel"
+                                        aria-labelledby="graph-tab" tabindex="0">
+                                            Bientôt
+                                        </div>
+                                        {{-- --}}
+                                        <div class="tab-pane fade show" id="maj{{$dataSelected->id}}" role="tabpanel"
+                                        aria-labelledby="maj-tab" tabindex="0">
+                                            <form method="POST" action="{{ route('edition-Pointage') }}" class="card bg-primary shadow-soft border-light">
+                                                @csrf
+                                                
+                                                <div class="card-body px-5">
+                                                    <div class="row">
+                                                        {{-- Journée debut --}}
+                                                        <div class="col-lg-6 col-md-12">
+                                                            <div class="form-group">
+                                                                <label for="date_debut_journee">Début journée</label>
+                                                                <div class="input-group mb-4">
+                                                                    <div class="input-group-prepend">
+                                                                        <span class="input-group-text">
+                                                                            <span class="far fa-calendar-alt"></span>
+                                                                        </span>
+                                                                    </div>
+                                                                    <input class="form-control datepicker" type="text" id="date_debut_journee"
+                                                                    name="date_debut_journee" value="{{$dataSelected->debut_journee}}" required autofocus>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        {{-- Journée fin --}}
+                                                        <div class="col-lg-6 col-md-12">
+                                                            <div class="form-group">
+                                                                <label for="date_fin_journee">Fin journée</label>
+                                                                <div class="input-group mb-4">
+                                                                    <div class="input-group-prepend">
+                                                                        <span class="input-group-text">
+                                                                            <span class="far fa-calendar-alt"></span>
+                                                                        </span>
+                                                                    </div>
+                                                                    <input class="form-control datepicker" type="text" id="date_fin_journee"
+                                                                    name="date_fin_journee" value="{{$dataSelected->fin_journee}}" required>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        {{-- Mission --}}
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label class="my-1 mr-2" for="mission">Mission/Vacation</label>
+                                                                <select class="custom-select my-1 mr-sm-2" id="mission" name="mission">
+                                                                    @foreach ($lesMissions as $data)
+                                                                    <option value="{{ $data->id }}"
+                                                                        {{ $dataSelected->id == $data->id ? 'selected' : '' }}>
+                                                                        {{ $data->nom }}</option>
+                                                                    @endforeach
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer text-center pt-0 pb-5">
+                                                    <button type="reset" class="btn btn-primary text-danger rounded">
+                                                        Annuler
+                                                    </button>
+                                                    <button type="submit" class="btn btn-primary text-success rounded">
+                                                        Valider
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        {{-- --}}
+                                        <div class="tab-pane fade show text-center" id="suppression{{$dataSelected->id}}" role="tabpanel"
+                                        aria-labelledby="suppression-tab" tabindex="0">
+                                            <p>Voulez vous supprimer <b>définitivement</b> la mission du {{ $dataSelected->debut_journee }} ?</p>
+                                            <p>Un retour en arrière ne sera pas possible</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <div class="modal-footer z-2 mx-auto text-center">
-                    <p class="text-gray">{{$data->nom}}</p>
+                    <p class="text-gray">{{$dataSelected->nom}}</p>
                 </div>
             </div>
         </div>
