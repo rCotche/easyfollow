@@ -281,7 +281,7 @@
 @foreach ($dataJour as $data)
     <div class="modal fade" id="modal_detail{{$data->id}}" tabindex="-1" aria-labelledby="modal_detail{{$data->id}}"
     aria-modal="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-xl-down">
             <div class="modal-content shadow-soft">
                 <div class="modal-header">
                     <button type="button" class="close ml-auto" data-bs-dismiss="modal"

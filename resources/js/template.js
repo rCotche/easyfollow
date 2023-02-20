@@ -228,7 +228,7 @@ $(document).ready(function () {
     });
 
     //Owl Carousel
-
+    /*
      $('.basic-carousel').owlCarousel({
         loop: true,
         margin: 10,
@@ -382,6 +382,7 @@ $(document).ready(function () {
             '<span class="fas fa-angle-right"></span>'
         ]
     });
+    */
 
     // When in viewport
     $('[data-toggle="on-screen"]')[0] && $('[data-toggle="on-screen"]').onScreen({
@@ -424,6 +425,7 @@ $(document).ready(function () {
     });
 
     //CounterUp
+    /*
     $('.counter').counterUp({
         delay: 10,
         time: 1000,
@@ -443,6 +445,7 @@ $(document).ready(function () {
             + '<span>%M</span> min '
             + '<span>%S</span> sec'));
     });
+    */
 
     //Parallax
     /*
@@ -452,10 +455,12 @@ $(document).ready(function () {
     */
 
     //Smooth scroll
+    /*
     var scroll = new SmoothScroll('a[href*="#"]', {
         speed: 500,
         speedAsDuration: true
     });
+    */
 
     // Equalize height to the max of the elements
     if ($(document).width() >= breakpoints.lg) {
